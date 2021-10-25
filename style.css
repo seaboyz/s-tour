@@ -1,4 +1,13 @@
 /* _________________________ */
+/* Custom properties         */
+/* _________________________ */
+:root {
+	--clr-dark: 230, 35%, 7%;
+	--clr-light: 231, 77%, 90%;
+  --clr-white: 0, 0%, 100%:
+}
+
+/* _________________________ */
 /* Reset                     */
 /* _________________________ */
 
@@ -63,6 +72,8 @@ select {
 /* _________________________ */
 /* Utility classes           */
 /* _________________________ */
+
+/* general */
 .flex {
 	display: flex;
 	gap: var(--gap, 1rem);
@@ -94,4 +105,25 @@ select {
 .box {
 	background: lightblue;
 	padding: 3rem;
+}
+
+/* colors */
+
+.bg-dark {
+  background-color: hsl(var(--clr-dark));
+}
+.bg-accent {
+  background-color: hsl(var(--clr-light));
+}
+.bg-white {
+  background-color: hsl(var(--clr-white));
+}
+.text-dark {
+  color: hsl(var(--clr-dark));
+}
+.text-accent {
+  color: hsl(var(--clr-light));
+}
+.text-white {
+  color: hsl(var(--clr-white));
 }
