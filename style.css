@@ -59,3 +59,39 @@ select {
 		scroll-behavior: auto !important;
 	}
 }
+
+/* _________________________ */
+/* Utility classes           */
+/* _________________________ */
+.flex {
+	display: flex;
+	gap: var(--gap, 1rem);
+}
+
+.grid {
+	display: grid;
+	gap: var(--gap, 1rem);
+}
+
+.container {
+	padding: 0 2em;
+	margin: 0 auto;
+	max-width: 80rem;
+}
+/* sr-only screen reader only */
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap; /* added line */
+	border: 0;
+}
+
+.box {
+	background: lightblue;
+	padding: 3rem;
+}
