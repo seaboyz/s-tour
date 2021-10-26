@@ -9,10 +9,14 @@
 		<title>Design system</title>
 		<!-- Google fonts -->
 
-		<link rel="stylesheet" href="Design%20system_files/style.css" />
-		<link rel="preconnect" href="https://fonts.googleapis.com/" />
-		<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
-		<link href="Design%20system_files/css2.css" rel="stylesheet" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
 		<div class="container" style="padding-top: 4rem">
@@ -37,8 +41,13 @@
 			</h1>
 
 			<section id="colors" style="margin-bottom: 9.25rem">
-				<h2 class="uppercase" style="margin-bottom: 3rem">
-					<span style="opacity: 0.2; margin-right: 1.75rem">01</span>colors
+				<h2
+					class="uppercase letter-spacing-1 ff-sans-cond"
+					style="margin-bottom: 3rem"
+				>
+					<span class="ff-sans-cond" style="opacity: 0.2; margin-right: 1.75rem"
+						>01</span
+					>colors
 				</h2>
 				<div class="flex" style="justify-content: space-between; gap: 1.875rem">
 					<div style="flex-grow: 1">
@@ -105,31 +114,44 @@
 			</section>
 
 			<section id="typography">
-				<h2 class="uppercase" style="margin-bottom: 3rem">
-					<span style="opacity: 0.2; margin-right: 1.75rem">02</span>Typography
+				<h2
+					class="uppercase letter-spacing-1 ff-sans-cond"
+					style="margin-bottom: 3rem"
+				>
+					<span class="ff-sans-cond" style="opacity: 0.2; margin-right: 1.75rem"
+						>02</span
+					>typography
 				</h2>
 				<div class="flex">
 					<div style="flex-basis: 100%">
 						<div style="margin-bottom: 1.5rem">
-							<p class="text-accent">Heading 1 - Bellefair Regular - 150px</p>
+							<p class="text-accent" style="margin-bottom: 0.5rem">
+								Heading 1 - Bellefair Regular - 150px
+							</p>
 							<p class="ff-serif fs-900 uppercase">Earth</p>
 						</div>
 						<div style="margin-bottom: 1.5rem">
-							<p class="text-accent">Heading 2 - Bellefair Regular - 100px</p>
+							<p class="text-accent" style="margin-bottom: 0.5rem">
+								Heading 2 - Bellefair Regular - 100px
+							</p>
 							<p class="ff-serif fs-800 uppercase">Venus</p>
 						</div>
 						<div style="margin-bottom: 2.5rem">
-							<p class="text-accent">Heading 3 - Bellefair Regular - 56px</p>
+							<p class="text-accent" style="margin-bottom: 0.5rem">
+								Heading 3 - Bellefair Regular - 56px
+							</p>
 							<p class="ff-serif fs-700 uppercase">Jupiter &amp; Saturn</p>
 						</div>
 						<div style="margin-bottom: 3rem">
-							<p class="text-accent">Heading 4 - Bellefair Regular - 32px</p>
+							<p class="text-accent" style="margin-bottom: 0.5rem">
+								Heading 4 - Bellefair Regular - 32px
+							</p>
 							<p class="ff-serif fs-600 uppercase">
 								Uranus, Neptune, &amp; Pluto
 							</p>
 						</div>
 						<div>
-							<p class="text-accent">
+							<p class="text-accent" style="margin-bottom: 0.5rem">
 								Heading 5 - Barlow Condensed Regular - 28px - 4.75 Character
 								Space
 							</p>
@@ -149,11 +171,13 @@
 
 					<div style="flex-basis: 100%">
 						<div style="margin-bottom: 2.5rem">
-							<p class="text-accent">Subheading 1 - Bellefair Regular - 28px</p>
+							<p class="text-accent" style="margin-bottom: 0.5rem">
+								Subheading 1 - Bellefair Regular - 28px
+							</p>
 							<p class="ff-serif fs-500 uppercase">384,400 km</p>
 						</div>
 						<div style="margin-bottom: 2.5rem">
-							<p class="text-accent">
+							<p class="text-accent" style="margin-bottom: 0.5rem">
 								Subheading 2 - Barlow Condensed Regular - 14px - 2.35 Character
 								Space
 							</p>
@@ -162,7 +186,7 @@
 							</p>
 						</div>
 						<div style="margin-bottom: 2.5rem">
-							<p class="text-accent">
+							<p class="text-accent" style="margin-bottom: 0.5rem">
 								Nav Text - Barlow Condensed Regular - 16px - 2.7 Character Space
 							</p>
 							<p class="ff-sans-cond fs-300 uppercase letter-spacing-2">
@@ -170,7 +194,12 @@
 							</p>
 						</div>
 						<div>
-							<p class="text-accent" style="opacity: 0.5">Body Text</p>
+							<p
+								class="text-accent"
+								style="opacity: 0.5; margin-bottom: 0.5rem"
+							>
+								Body Text
+							</p>
 							<p style="line-height: 2rem">
 								Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 								Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi
@@ -192,57 +221,5 @@
 				</div>
 			</section>
 		</div>
-		<!-- Code injected by live-server -->
-		<script type="text/javascript">
-			// <![CDATA[  <-- For SVG support
-			if ('WebSocket' in window) {
-				(function () {
-					function refreshCSS() {
-						var sheets = [].slice.call(document.getElementsByTagName('link'));
-						var head = document.getElementsByTagName('head')[0];
-						for (var i = 0; i < sheets.length; ++i) {
-							var elem = sheets[i];
-							var parent = elem.parentElement || head;
-							parent.removeChild(elem);
-							var rel = elem.rel;
-							if (
-								(elem.href && typeof rel != 'string') ||
-								rel.length == 0 ||
-								rel.toLowerCase() == 'stylesheet'
-							) {
-								var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-								elem.href =
-									url +
-									(url.indexOf('?') >= 0 ? '&' : '?') +
-									'_cacheOverride=' +
-									new Date().valueOf();
-							}
-							parent.appendChild(elem);
-						}
-					}
-					var protocol =
-						window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-					var address =
-						protocol + window.location.host + window.location.pathname + '/ws';
-					var socket = new WebSocket(address);
-					socket.onmessage = function (msg) {
-						if (msg.data == 'reload') window.location.reload();
-						else if (msg.data == 'refreshcss') refreshCSS();
-					};
-					if (
-						sessionStorage &&
-						!sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')
-					) {
-						console.log('Live reload enabled.');
-						sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-					}
-				})();
-			} else {
-				console.error(
-					'Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.'
-				);
-			}
-			// ]]>
-		</script>
 	</body>
 </html>
