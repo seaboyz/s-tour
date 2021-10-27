@@ -211,22 +211,161 @@
 				<h2 class="numbered-title"><span>03</span>INTERACTIVE ELEMENTS</h2>
 
 				<!-- navigation -->
-				<div></div>
-				<!-- button -->
-				<a
-					href="#"
-					class="
-						large-button
-						ff-serif
-						text-dark
-						bg-white
-						fs-600
-						uppercase
-						letter-spacing-3
-					"
-				>
-					Explore
-				</a>
+				<nav style="margin-bottom: 75px">
+					<ul class="primary-navigation" style="margin-bottom: 2rem">
+						<li style="border-bottom: 3px solid hsl(var(--clr-white))">
+							<a href="#"><span>00</span>Active</a>
+						</li>
+						<li style="border-bottom: 3px solid hsl(var(--clr-white), 0.5)">
+							<a href="#"><span>01</span>Hovered</a>
+						</li>
+						<li>
+							<a class="underline" href="#"><span>02</span>Idle</a>
+						</li>
+					</ul>
+					<p
+						class="text-accent"
+						style="margin-bottom: 0.5rem; text-align: center"
+					>
+						Different States of Navigation Bar
+					</p>
+				</nav>
+
+				<div class="flex">
+					<!-- buttons -->
+					<div
+						class="flex"
+						style="
+							flex-basis: 100%;
+							flex-direction: column;
+							align-items: center;
+						"
+					>
+						<a
+							href="#"
+							class="
+								large-button
+								ff-serif
+								text-dark
+								bg-white
+								fs-600
+								uppercase
+								letter-spacing-3
+							"
+							style="margin-bottom: 13px"
+						>
+							Explore
+						</a>
+						<p class="text-accent ff-sans-normal">
+							Landing Page Main Button - Idle
+						</p>
+
+						<a
+							href="#"
+							class="
+								large-button
+								ff-serif
+								text-dark
+								bg-white
+								fs-600
+								uppercase
+								letter-spacing-3
+							"
+							style="
+								margin-bottom: 101px;
+								margin-top: 140px;
+								outline: 5.5rem solid hsl(var(--clr-white), 0.1);
+							"
+						>
+							Explore
+						</a>
+						<p class="text-accent ff-sans-normal">
+							Landing Page Main Button - Hover
+						</p>
+					</div>
+
+					<div
+						class="flex"
+						style="
+							flex-basis: 100%;
+							flex-direction: column;
+							align-items: center;
+						"
+					>
+						<!-- tabs -->
+						<div style="margin-bottom: 10.125rem">
+							<div
+								class="flex"
+								style="
+									gap: 2rem;
+									margin-bottom: 1.5rem;
+									justify-content: center;
+								"
+							>
+								<a aria-selected="true" class="tab underline"> Moon </a>
+								<a aria-selected="false" class="tab underline">Mars</a>
+								<a aria-selected="false" class="tab underline"> Europa </a>
+							</div>
+							<p class="text-accent ff-sans-normal">
+								Tabs (Active, Hover, & Idle)
+							</p>
+						</div>
+
+						<!-- dots -->
+						<div style="margin-bottom: 7.5rem">
+							<div
+								class="flex"
+								style="
+									gap: 2rem;
+									margin-bottom: 1.5rem;
+									justify-content: center;
+								"
+							>
+								<a aria-selected="true" class="dot"
+									><span class="sr-only"> title</span></a
+								>
+								<a
+									aria-selected="false"
+									class="dot"
+									style="background-color: hsl(var(--clr-white), 0.5)"
+									><span class="sr-only"> title</span></a
+								>
+								<a aria-selected="false" class="dot"
+									><span class="sr-only"> title</span>
+								</a>
+							</div>
+							<p class="text-accent ff-sans-normal">
+								Slider 1 States (Active, Hover, & Idle)
+							</p>
+						</div>
+
+						<!-- numbers -->
+						<div>
+							<div
+								class="flex"
+								style="
+									gap: 2rem;
+									flex-direction: column;
+									margin-bottom: 1.5rem;
+									align-items: center;
+								"
+							>
+								<a aria-selected="true" class="circle-number fs-600 ff-serif"
+									>1</a
+								>
+								<a aria-selected="false" class="circle-number fs-600 ff-serif"
+									>2</a
+								>
+								<a aria-selected="false" class="circle-number fs-600 ff-serif"
+									>3</a
+								>
+							</div>
+							<p class="text-accent ff-sans-normal">
+								Slider 2 States (Active, Hover, & Idle)
+							</p>
+						</div>
+					</div>
+				</div>
 			</section>
 		</div>
 	</body>

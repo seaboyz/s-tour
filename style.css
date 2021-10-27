@@ -46,8 +46,10 @@ h4,
 h5,
 h6,
 p,
-picture {
+picture,
+ul {
 	margin: 0;
+	padding: 0;
 }
 body,
 h1,
@@ -59,6 +61,10 @@ h6,
 p,
 picture {
 	font-weight: 400;
+}
+
+li {
+	list-style: none;
 }
 
 /* Reset link underline */
@@ -239,4 +245,99 @@ select {
 	margin-right: 1.75rem;
 	font-weight: var(--fw-700);
 	color: hsl(var(--clr-white), 0.25);
+}
+
+.large-button {
+	display: grid;
+	place-items: center;
+	aspect-ratio: 1;
+	width: 17.125rem;
+	border-radius: 50%;
+	outline: 0 solid hsl(var(--clr-white), 0);
+	transition: outline 800ms ease-in-out;
+}
+.large-button:hover,
+.large-button:focus {
+	outline: 5.5rem solid hsl(var(--clr-white), 0.1);
+	transition: outline 800ms ease-in-out;
+}
+
+.underline:hover {
+	border-bottom: 3px solid hsl(var(--clr-white), 0.5);
+}
+.underline:active {
+	border-bottom: 3px solid hsl(var(--clr-white));
+}
+
+.primary-navigation {
+	display: flex;
+	gap: 8.125rem;
+	justify-content: center;
+	background-color: hsl(var(--clr-white), 0.04);
+}
+
+.primary-navigation a {
+	color: hsl(var(--clr-white));
+	font-family: var(--ff-sans-cond);
+	letter-spacing: 2.7px;
+	text-transform: uppercase;
+	font-size: var(--fs-300);
+	padding: 2.375rem 0;
+	display: block;
+}
+
+.primary-navigation a span {
+	font-weight: var(--fw-700);
+	margin-right: 0.75rem;
+}
+
+.tab {
+	background-color: unset;
+	border: none;
+	cursor: pointer;
+	color: hsl(var(--clr-light));
+	font-family: var(--ff-sans-cond);
+	letter-spacing: 2.7px;
+	text-transform: uppercase;
+	font-size: var(--fs-300);
+	padding: 0.75rem 0;
+}
+
+.tab[aria-selected='true'] {
+	color: hsl(var(--clr-white));
+	border-bottom: 3px solid hsl(var(--clr-white));
+}
+
+.dot {
+	cursor: pointer;
+	background-color: hsl(var(--clr-white), 0.17);
+	aspect-ratio: 1;
+	width: 1rem;
+	border-radius: 50%;
+}
+
+.dot:hover {
+	background-color: hsl(var(--clr-white), 0.5);
+}
+
+.dot[aria-selected='true'] {
+	background-color: hsl(var(--clr-white));
+}
+
+.circle-number {
+	cursor: pointer;
+	display: grid;
+	place-items: center;
+	aspect-ratio: 1;
+	width: 5rem;
+	border-radius: 50%;
+	border: 1px solid hsl(var(--clr-white), 0.5);
+}
+
+.circle-number:hover {
+	border-color: hsl(var(--clr-white));
+}
+.circle-number[aria-selected='true'] {
+	background-color: hsl(var(--clr-white));
+	color: hsl(var(--clr-dark));
 }
