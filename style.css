@@ -80,6 +80,10 @@ body {
 	min-height: 100vh;
 	background-color: hsl(var(--clr-dark));
 	color: hsl(var(--clr-white));
+
+	/* grid */
+	display: grid;
+	grid-template-rows: min-content 1fr;
 }
 
 /* make images easier to work with */
@@ -142,21 +146,27 @@ select {
 	max-width: 80rem;
 }
 
-.container-grid {
+.grid-container {
 	display: grid;
-	grid-template-columns: minmax(2rem, 1fr) minmax(0, 40rem) minmax(0, 40rem) minmax(
-			2rem,
-			1fr
-		);
-	column-gap: var(--container-gap, 2rem);
 }
 
-.container-grid > *:first-child {
-	grid-column: 2;
+/* >= 600px */
+@media (min-width: 600px) {
+	.grid-container {
+		grid-template-columns: minmax(2rem, 1fr) minmax(0, 40rem) minmax(0, 40rem) minmax(
+				2rem,
+				1fr
+			);
+		column-gap: var(--container-gap, 2rem);
+	}
+	.grid-container > *:first-child {
+		grid-column: 2;
+	}
+	.grid-container > *:last-child {
+		grid-column: 3;
+	}
 }
-.container-grid > *:last-child {
-	grid-column: 3;
-}
+
 /* sr-only screen reader only */
 .sr-only {
 	position: absolute;
@@ -378,4 +388,8 @@ select {
 	background-image: url(./assets/home/background-home-desktop.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+
+.primary-header {
+	align-items: center;
 }
