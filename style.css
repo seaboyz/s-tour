@@ -144,7 +144,15 @@ select {
 
 .container-grid {
 	display: grid;
-	grid-template-columns: 2rem minmax(0, 80rem) 2rem;
+	grid-template-columns: 2rem minmax(0, 40rem) minmax(0, 40rem) 2rem;
+	column-gap: var(--container-gap, 2rem);
+}
+
+.container-grid > *:first-child {
+	grid-column: 2;
+}
+.container-grid > *:last-child {
+	grid-column: 3;
 }
 /* sr-only screen reader only */
 .sr-only {
