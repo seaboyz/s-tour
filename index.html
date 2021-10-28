@@ -1,18 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="32x32"
-			href="./assets/favicon-32x32.png"
-		/>
+		<title>Space Tour</title>
+		<!-- Google fonts -->
 
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&amp;family=Bellefair&amp;family=Barlow:wght@400;700&amp;display=swap"
+			rel="stylesheet"
+		/>
+		<!-- Custom CSS -->
 		<link rel="stylesheet" href="style.css" />
-		<title>S-tour</title>
 	</head>
-	<body></body>
+	<body class="home" style="padding-top: 40px">
+		<header
+			class="primary-header flex"
+			style="margin-bottom: 251px; align-items: center"
+		>
+			<div>
+				<img
+					src="./assets/shared/logo.svg"
+					alt="space tour logo"
+					class="logo"
+					style="margin-left: 55px"
+				/>
+			</div>
+			<span
+				style="
+					height: 1px;
+					width: 35%;
+					background-color: hsl(var(--clr-white), 0.25);
+					position: relative;
+					left: 4rem;
+				"
+			></span>
+			<nav style="align-items: center; width: 60%">
+				<ul class="primary-navigation" style="--gap: 3rem">
+					<li>
+						<a class="underline" href="#" aria-selected="true"
+							><span>00</span>home</a
+						>
+					</li>
+					<li>
+						<a class="underline" href="#" aria-selected="false"
+							><span>01</span>destination</a
+						>
+					</li>
+					<li>
+						<a class="underline" href="#" aria-selected="false"
+							><span>02</span>crew</a
+						>
+					</li>
+					<li>
+						<a class="underline" href="#" aria-selected="false"
+							><span>03</span>technology</a
+						>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+			<div
+				class="flex container"
+				style="align-items: flex-end; justify-content: space-between"
+			>
+				<div style="width: 40%">
+					<h1
+						class="ff-sans-cond fs-500 uppercase text-accent letter-spacing-2"
+						style="font-weight: var(--fw-400)"
+					>
+						So, you want to travel to space
+						<span
+							class="ff-serif fs-900 uppercase text-white"
+							style="
+								display: block;
+								margin-top: 24px;
+								margin-top: 24px;
+								line-height: 172px;
+							"
+							>space</span
+						>
+					</h1>
+					<p class="text-accent" style="line-height: 32px">
+						Let’s face it; if you want to go to space, you might as well
+						genuinely go to outer space and not hover kind of on the edge of it.
+						Well sit back, and relax because we’ll give you a truly out of this
+						world experience!
+					</p>
+				</div>
+				<div>
+					<a
+						href="#"
+						class="
+							large-button
+							ff-serif
+							text-dark
+							bg-white
+							fs-600
+							uppercase
+							letter-spacing-3
+						"
+					>
+						Explore
+					</a>
+				</div>
+			</div>
+		</main>
+	</body>
 </html>
