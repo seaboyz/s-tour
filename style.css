@@ -144,7 +144,10 @@ select {
 
 .container-grid {
 	display: grid;
-	grid-template-columns: 2rem minmax(0, 40rem) minmax(0, 40rem) 2rem;
+	grid-template-columns: minmax(2rem, 1fr) minmax(0, 40rem) minmax(0, 40rem) minmax(
+			2rem,
+			1fr
+		);
 	column-gap: var(--container-gap, 2rem);
 }
 
