@@ -119,6 +119,10 @@ select {
 	gap: var(--gap, 1rem);
 }
 
+.flex--column {
+	flex-direction: column;
+}
+
 .grid {
 	display: grid;
 	gap: var(--gap, 1rem);
@@ -130,8 +134,17 @@ select {
 
 .container {
 	padding: 0 2em;
+	/* ↑ equals ↓ */
+	/* padding-inline: 2rem; */
 	margin: 0 auto;
+	/* ↑ equals ↓ */
+	/* margin-inline: 2rem; */
 	max-width: 80rem;
+}
+
+.container-grid {
+	display: grid;
+	grid-template-columns: 2rem minmax(0, 80rem) 2rem;
 }
 /* sr-only screen reader only */
 .sr-only {
@@ -262,18 +275,26 @@ select {
 	transition: outline 800ms ease-in-out;
 }
 
+.underline {
+	border-bottom: 3px solid hsl(var(--clr-white), 0);
+}
+
 .underline:hover {
-	border-bottom: 3px solid hsl(var(--clr-white), 0.5);
+	border-color: hsl(var(--clr-white), 0.5);
 }
 .underline:active {
-	border-bottom: 3px solid hsl(var(--clr-white));
+	border-color: hsl(var(--clr-white));
+}
+.underline[aria-selected='true'] {
+	border-color: hsl(var(--clr-white));
 }
 
 .primary-navigation {
 	display: flex;
-	gap: 8.125rem;
+	gap: var(--gap, 2rem);
 	justify-content: center;
 	background-color: hsl(var(--clr-white), 0.04);
+	backdrop-filter: blur(81.5485px);
 }
 
 .primary-navigation a {
@@ -340,4 +361,10 @@ select {
 .circle-number[aria-selected='true'] {
 	background-color: hsl(var(--clr-white));
 	color: hsl(var(--clr-dark));
+}
+
+.home {
+	background-image: url(./assets/home/background-home-desktop.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
 }
