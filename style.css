@@ -296,6 +296,7 @@ select {
 	color: hsl(var(--clr-white), 0.25);
 }
 
+/* explore button */
 .large-button {
 	display: grid;
 	place-items: center;
@@ -323,14 +324,20 @@ select {
 		background-color: hsl(var(--clr-white), 0.1);
 		transition: background-color 400ms ease-in-out;
 	}
-	.underline:hover {
-		border-bottom: 3px solid hsl(var(--clr-white), 0.5);
-	}
-	.underline:active {
-		border-bottom: 3px solid hsl(var(--clr-white));
+}
+/* header */
+.primary-header {
+	padding-top: 1.5rem;
+	position: relative;
+	padding-inline: clamp(24px, 5vw, 50px);
+}
+@media (min-width: 1200px) {
+	.primary-header {
+		margin-top: min(calc(100vw - 1200px), 64px);
 	}
 }
 
+/* navigation */
 .primary-navigation {
 	gap: var(--gap, 2rem);
 	background-color: hsl(var(--clr-white), 0.04);
@@ -360,15 +367,16 @@ select {
 	margin-right: 0.75rem;
 }
 
-/* >=600px */
 @media (min-width: 600px) {
 	.primary-navigation {
 		height: initial;
 		padding-top: initial;
 		flex-direction: initial;
-		padding-block: 39px;
 		padding-left: 3rem;
 		--gap: 2.25rem;
+	}
+	.primary-navigation a {
+		padding-block: 39px;
 	}
 	.primary-navigation a span {
 		display: none;
@@ -396,6 +404,25 @@ select {
 @media (min-width: 600px) {
 	.close {
 		z-index: 1;
+	}
+}
+/* underline */
+.underline {
+	border-bottom: 3px solid hsl(var(--clr-white), 0);
+}
+
+@media (min-width: 600px) {
+	.underline[aria-selected='true'] {
+		border-bottom: 3px solid hsl(var(--clr-white));
+	}
+}
+
+@media (min-width: 1200px) {
+	.underline:hover {
+		border-bottom: 3px solid hsl(var(--clr-white), 0.5);
+	}
+	.underline:active {
+		border-bottom: 3px solid hsl(var(--clr-white));
 	}
 }
 
@@ -455,14 +482,27 @@ select {
 	cursor: pointer;
 }
 
-.primary-header {
-	padding-top: 1.5rem;
-	position: relative;
-	padding-inline: clamp(24px, 5vw, 50px);
+/* _________________________ */
+/* page specific             */
+/* _________________________ */
+
+/* homepage */
+.home {
+	background-image: url('./assets/home/background-home-mobile.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
 }
-@media (min-width: 1200px) {
-	.primary-header {
-		margin-top: min(calc(100vw - 1200px), 64px);
+
+@media (min-width: 600px) {
+	.home {
+		background-image: url('./assets/home/background-home-tablet.jpg');
+	}
+}
+
+@media (min-width: 900px) and (orientation: landscape) {
+	.home {
+		background-image: url('./assets/home/background-home-desktop.jpg');
 	}
 }
 
@@ -498,32 +538,7 @@ select {
 	}
 }
 
-/* page specific */
-/* homepage background */
-.home {
-	background-image: url('./assets/home/background-home-mobile.jpg');
-	background-size: cover;
-	background-position: bottom center;
-	background-repeat: no-repeat;
-}
-
-@media (min-width: 600px) {
-	.home {
-		background-image: url('./assets/home/background-home-tablet.jpg');
-	}
-}
-
-@media (min-width: 900px) and (orientation: landscape) {
-	.home {
-		background-image: url('./assets/home/background-home-desktop.jpg');
-	}
-}
-/* @media (min-width: 900px) {
-	.home {
-		background-image: url('./assets/home/background-home-desktop.jpg');
-	}
-} */
-/* must be at the end */
+/* must be at the end for css source order reason */
 .hidden {
 	display: none;
 }
