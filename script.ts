@@ -1,17 +1,20 @@
-const hamburgerBtn = document.querySelector('.hamburger');
-const closeBtn = document.querySelector('.close');
-const header = document.querySelector('header');
-const nav = document.querySelector('.primary-navigation');
+const nav:
+	| ({
+			dataset: {
+				visible: 'true' | 'false';
+			};
+	  } & HTMLElement)
+	| null = document.querySelector('.primary-navigation');
 
-header?.addEventListener('click', e => {
-	const target = e.target as HTMLDivElement;
-	if (target.classList.contains('hamburger')) {
-		hamburgerBtn?.classList.toggle('hidden');
-		closeBtn?.classList.toggle('hidden');
-		nav?.classList.toggle('hidden');
-	} else if (target.classList.contains('close')) {
-		hamburgerBtn?.classList.toggle('hidden');
-		closeBtn?.classList.toggle('hidden');
-		nav?.classList.toggle('hidden');
+const navToggle: HTMLElement | null =
+	document.querySelector('.mobile-nav-toggle');
+
+navToggle?.addEventListener('click', () => {
+	if (nav?.dataset.visible === 'true') {
+		nav!.dataset.visible = 'false';
+		navToggle?.setAttribute('aria-expanded', 'false');
+	} else {
+		nav!.dataset.visible = 'true';
+		navToggle?.setAttribute('aria-expanded', 'true');
 	}
 });

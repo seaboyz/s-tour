@@ -24,16 +24,19 @@
 			<div class="logo">
 				<img src="./assets/shared/logo.svg" alt="space tour logo" />
 			</div>
-			<button class="mobile-nav-toggle">
-				<span
-					class="sr-only"
-					aria-controls="primary-navigation"
-					aria-expanded="false"
-					>Menu</span
-				>
+			<button
+				class="mobile-nav-toggle"
+				aria-controls="primary-navigation"
+				aria-expanded="false"
+			>
+				<span class="sr-only">Menu</span>
 			</button>
 			<nav>
-				<ul id="primary-navigation" class="primary-navigation flex">
+				<ul
+					id="primary-navigation"
+					data-visible="false"
+					class="primary-navigation flex"
+				>
 					<li>
 						<a class="underline" href="#" aria-selected="true"
 							><span>00</span>home</a
