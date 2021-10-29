@@ -345,7 +345,7 @@ select {
 	-webkit-backdrop-filter: blur(81.5485px);
 	width: 67.7vw;
 	height: 100vh;
-	position: absolute;
+	position: fixed;
 	right: 0;
 	top: 0;
 	z-index: 1;
@@ -353,6 +353,7 @@ select {
 	padding-top: 7.375rem;
 	flex-direction: column;
 }
+
 .primary-navigation a {
 	color: hsl(var(--clr-white));
 	font-family: var(--ff-sans-cond);
