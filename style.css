@@ -354,6 +354,14 @@ select {
 	flex-direction: column;
 }
 
+/* backdrop-filter fallback */
+@supports (not (backdrop-filter: blur(81.5485px))) and
+	(not (-webkit-backdrop-filter: blur(81.5485px))) {
+	.primary-navigation {
+		background-color: hsl(var(--clr-dark), 0.9);
+	}
+}
+
 .primary-navigation a {
 	color: hsl(var(--clr-white));
 	font-family: var(--ff-sans-cond);
