@@ -21,31 +21,41 @@
 	</head>
 	<body class="home">
 		<header class="primary-header flex" style="justify-content: space-between">
-			<img class="logo" src="./assets/shared/logo.svg" alt="space tour logo" />
-			<img class="hamburger" src="./assets/shared/icon-hamburger.svg" alt="" />
-			<img class="close hidden" src="./assets/shared/icon-close.svg" alt="" />
-			<ul class="primary-navigation flex hidden">
-				<li>
-					<a class="underline" href="#" aria-selected="true"
-						><span>00</span>home</a
-					>
-				</li>
-				<li>
-					<a class="underline" href="#" aria-selected="false"
-						><span>01</span>destination</a
-					>
-				</li>
-				<li>
-					<a class="underline" href="#" aria-selected="false"
-						><span>02</span>crew</a
-					>
-				</li>
-				<li>
-					<a class="underline" href="#" aria-selected="false"
-						><span>03</span>technology</a
-					>
-				</li>
-			</ul>
+			<div class="logo">
+				<img src="./assets/shared/logo.svg" alt="space tour logo" />
+			</div>
+			<button class="mobile-nav-toggle">
+				<span
+					class="sr-only"
+					aria-controls="primary-navigation"
+					aria-expanded="false"
+					>Menu</span
+				>
+			</button>
+			<nav>
+				<ul id="primary-navigation" class="primary-navigation flex">
+					<li>
+						<a class="underline" href="#" aria-selected="true"
+							><span>00</span>home</a
+						>
+					</li>
+					<li>
+						<a class="underline" href="#" aria-selected="false"
+							><span>01</span>destination</a
+						>
+					</li>
+					<li>
+						<a class="underline" href="#" aria-selected="false"
+							><span>02</span>crew</a
+						>
+					</li>
+					<li>
+						<a class="underline" href="#" aria-selected="false"
+							><span>03</span>technology</a
+						>
+					</li>
+				</ul>
+			</nav>
 		</header>
 
 		<main class="main flex">
