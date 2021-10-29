@@ -90,6 +90,12 @@ body {
 	min-width: 375px;
 }
 
+@media (orientation: lanscape) {
+	body {
+		overflow: hidden;
+	}
+}
+
 @media (min-width: 600px) {
 	body {
 		overflow: initial;
@@ -97,7 +103,7 @@ body {
 }
 @media (min-width: 900px) {
 	body {
-		overflow: hide;
+		overflow: hidden;
 	}
 }
 
@@ -452,14 +458,14 @@ select {
 }
 @media (min-width: 1200px) {
 	.primary-header {
-		margin-top: min(calc(100vw - 1200px), 40px);
+		margin-top: min(calc(100vw - 1200px), 64px);
 	}
 }
 
 .main {
 	flex-direction: column;
 	text-align: center;
-	--gap: 5rem;
+	--gap: max(5rem, 20.3vw);
 	margin-top: 12.8vw;
 	align-items: center;
 }
@@ -483,7 +489,7 @@ select {
 		flex-direction: row;
 		justify-content: center;
 		align-items: flex-end;
-		--gap: min(calc(100vw - 820px), 26.8vw);
+		--gap: min(calc(100vw - 900px), 26.8vw);
 		text-align: initial;
 	}
 }
@@ -501,11 +507,16 @@ select {
 	}
 }
 
-@media (min-width: 900px) {
+@media (min-width: 900px) and (orientation: landscape) {
 	.home {
 		background-image: url('./assets/home/background-home-desktop.jpg');
 	}
 }
+/* @media (min-width: 900px) {
+	.home {
+		background-image: url('./assets/home/background-home-desktop.jpg');
+	}
+} */
 /* must be at the end */
 .hidden {
 	display: none;
