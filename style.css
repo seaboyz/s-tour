@@ -306,7 +306,7 @@ select {
 	position: relative;
 }
 .large-button span {
-	display: block;
+	display: none;
 	position: absolute;
 	aspect-ratio: 1;
 	width: 14em;
@@ -315,6 +315,9 @@ select {
 	transition: background-color 400ms ease-in-out;
 }
 @media (min-width: 1200px) {
+	.large-button span {
+		display: block;
+	}
 	.large-button span:hover,
 	.large-button span:focus {
 		background-color: hsl(var(--clr-white), 0.1);
@@ -340,6 +343,7 @@ select {
 	top: 0;
 	z-index: 1;
 	padding-left: 2rem;
+	padding-top: 7.375rem;
 	flex-direction: column;
 }
 .primary-navigation a {
@@ -494,10 +498,12 @@ select {
 	}
 }
 
+/* page specific */
 /* homepage background */
 .home {
 	background-image: url('./assets/home/background-home-mobile.jpg');
 	background-size: cover;
+	background-position: bottom center;
 	background-repeat: no-repeat;
 }
 
