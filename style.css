@@ -334,6 +334,17 @@ select {
 @media (min-width: 1200px) {
 	.primary-header {
 		margin-top: min(calc(100vw - 1200px), 64px);
+		align-items: center;
+	}
+	.primary-header::before {
+		content: '';
+		width: 32vw;
+		height: 1px;
+		background-color: hsl(var(--clr-white), 0.25);
+		display: block;
+		position: absolute;
+		left: 167px;
+		z-index: 3;
 	}
 }
 
@@ -403,6 +414,12 @@ select {
 @media (min-width: 900px) {
 	.primary-navigation {
 		padding-left: min(calc(100vw - 852px), 123px);
+	}
+}
+
+@media (min-width: 1200px) {
+	.primary-navigation a span {
+		display: initial;
 	}
 }
 
