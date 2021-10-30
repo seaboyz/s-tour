@@ -345,7 +345,7 @@ select {
 	-webkit-backdrop-filter: blur(81.5485px);
 	width: 67.7vw;
 	height: 100vh;
-	position: fixed;
+	position: absolute;
 	right: 0;
 	top: 0;
 	z-index: 1;
@@ -385,10 +385,11 @@ select {
 @media (min-width: 600px) {
 	.primary-navigation {
 		height: initial;
+		width: 58vw;
 		padding-top: initial;
 		flex-direction: initial;
 		padding-left: 3rem;
-		--gap: 2.25rem;
+		--gap: min(4.69vw, 3rem);
 		transform: initial;
 	}
 	.primary-navigation a {
@@ -396,6 +397,12 @@ select {
 	}
 	.primary-navigation a span {
 		display: none;
+	}
+}
+
+@media (min-width: 900px) {
+	.primary-navigation {
+		padding-left: min(calc(100vw - 852px), 123px);
 	}
 }
 
