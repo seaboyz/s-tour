@@ -338,14 +338,14 @@ select {
 	}
 	.primary-header::before {
 		content: '';
-		width: 34vw;
+		width: calc(100vw - 58vw - 108px);
 		height: 1px;
 		background-color: hsl(var(--clr-white), 0.25);
 		display: block;
 		position: relative;
 		right: 52vw;
 		z-index: 2;
-		order: 2;
+		order: 1;
 		justify-content: flex-end;
 	}
 }
