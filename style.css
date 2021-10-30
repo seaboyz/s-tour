@@ -338,13 +338,15 @@ select {
 	}
 	.primary-header::before {
 		content: '';
-		width: 32vw;
+		width: 34vw;
 		height: 1px;
 		background-color: hsl(var(--clr-white), 0.25);
 		display: block;
-		position: absolute;
-		left: 167px;
-		z-index: 3;
+		position: relative;
+		right: 52vw;
+		z-index: 2;
+		order: 2;
+		justify-content: flex-end;
 	}
 }
 
