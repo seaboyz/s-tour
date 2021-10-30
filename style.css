@@ -532,7 +532,7 @@ select {
 }
 
 .main-content {
-	max-width: 450px;
+	width: clamp(327px, 87.2vw, 450px);
 }
 
 .main-content span {
