@@ -1,27 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Space tourism website</title>
-</head>
-<body>
+		<title>Space Tour</title>
+		<!-- Google fonts -->
 
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&amp;family=Bellefair&amp;family=Barlow:wght@400;700&amp;display=swap"
+			rel="stylesheet"
+		/>
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="style.css" />
+		<script src="script.js" defer></script>
+	</head>
+	<body class="crew">
+		<header class="primary-header flex" style="justify-content: space-between">
+			<div class="logo">
+				<a href="index.html">
+					<img src="./assets/shared/logo.svg" alt="space tour logo" />
+				</a>
+			</div>
+			<button
+				class="mobile-nav-toggle"
+				aria-controls="primary-navigation"
+				aria-expanded="false"
+			>
+				<span class="sr-only">Menu</span>
+			</button>
+			<nav>
+				<ul
+					id="primary-navigation"
+					data-visible="false"
+					class="primary-navigation flex"
+				>
+					<li>
+						<a class="underline" href="index.html" aria-selected="false"
+							><span aria-hidden="true">00</span>home</a
+						>
+					</li>
+					<li>
+						<a
+							class="underline"
+							href="destination-moon.html"
+							aria-selected="false"
+							><span aria-hidden="true">01</span>destination</a
+						>
+					</li>
+					<li>
+						<a class="underline" href="crew-commander.html" aria-selected="true"
+							><span aria-hidden="true">02</span>crew</a
+						>
+					</li>
+					<li>
+						<a class="underline" href="#" aria-selected="false"
+							><span aria-hidden="true">03</span>technology</a
+						>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<h2 class="numbered-title ff-sans-cond fs-500 letter-spacing-2 uppercase">
+			<span class="ff-sans-cond fs-500 letter-spacing-2 uppercase">02</span>Meet
+			your crew
+		</h2>
 
-  02 Meet your crew
+		<main class="main flex">
+			<div class="image" style="align-self: center">
+				<img src="./assets/crew/image-mark-shuttleworth.png" alt="" />
+			</div>
 
-  Mission Specialist
-  Mark Shuttleworth
+			<div class="dots flex">
+				<a href="crew-commander.html" aria-selected="false"
+					><span class="sr-only">commander</span></a
+				>
+				<a href="crew-specialist.html" aria-selected="true"
+					><span class="sr-only">specialist</span>
+				</a>
+				<a href="crew-pilot.html" aria-selected="false"
+					><span class="sr-only">pilot</span>
+				</a>
+				<a href="crew-engineer.html" aria-selected="false"
+					><span class="sr-only">engineer</span></a
+				>
+			</div>
 
-  Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind 
-  the Linux-based Ubuntu operating system. Shuttleworth became the first South 
-  African to travel to space as a space tourist.
-</body>
+			<div class="main-content">
+				<h1
+					class="ff-serif uppercase text-white fs-500"
+					style="color: hsl(var(--clr-white), 0.5)"
+				>
+					Mission Specialist
+					<span class="ff-serif uppercase text-white block fs-700"
+						>MARK SHUTTLEWORTH</span
+					>
+				</h1>
+				<p class="text-accent">
+					Mark Richard Shuttleworth is the founder and CEO of Canonical, the
+					company behind the Linux-based Ubuntu operating system. Shuttleworth
+					became the first South African to travel to space as a space tourist.
+				</p>
+			</div>
+		</main>
+	</body>
 </html>
