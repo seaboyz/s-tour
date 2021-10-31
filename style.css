@@ -325,6 +325,7 @@ select {
 	place-items: center;
 	aspect-ratio: 1;
 	width: 7.5em;
+	height: 7.5em;
 	border-radius: 50%;
 	transition: outline 800ms ease-in-out;
 	position: relative;
@@ -334,6 +335,7 @@ select {
 	position: absolute;
 	aspect-ratio: 1;
 	width: 14em;
+	height: 14em;
 	background-color: hsl(var(--clr-white), 0);
 	border-radius: 50%;
 	transition: background-color 400ms ease-in-out;
@@ -514,6 +516,7 @@ select {
 	background-color: hsl(var(--clr-white), 0.17);
 	aspect-ratio: 1;
 	width: 1rem;
+	height: 1rem;
 	border-radius: 50%;
 }
 
@@ -531,6 +534,7 @@ select {
 	place-items: center;
 	aspect-ratio: 1;
 	width: 2.5em;
+	height: 2.5em;
 	border-radius: 50%;
 	border: 1px solid hsl(var(--clr-white), 0.5);
 }
