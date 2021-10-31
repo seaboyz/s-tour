@@ -10,10 +10,10 @@
 	/* font sizes */
 	--fs-900: clamp(5rem, 20vw, 9.375rem);
 	--fs-800: clamp(3.5rem, 10.42vw, 6.25rem);
-	--fs-700: 3.5rem;
+	--fs-700: clamp(1.5rem, 5.21vw, 3.5rem);
 	--fs-600: clamp(1.25rem, 4.17vw, 2rem);
 	--fs-500: clamp(1rem, 2.6vw, 1.75rem);
-	--fs-400: clamp(0.9375, 2vw, 1.125rem);
+	--fs-400: clamp(0.9375rem, 2vw, 1.125rem);
 	--fs-300: 1rem;
 	--fs-200: 0.875rem;
 
@@ -96,6 +96,9 @@ body {
 	background-color: hsl(var(--clr-dark));
 	color: hsl(var(--clr-white));
 	min-width: 375px;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
 
 	position: relative;
 }
@@ -226,6 +229,14 @@ select {
 	font-family: var(--ff-sans-normal);
 }
 
+.fw-400 {
+	font-weight: var(--fw-400);
+}
+
+.fw-700 {
+	font-weight: var(--fw-700);
+}
+
 .letter-spacing-1 {
 	letter-spacing: 4.75px;
 }
@@ -277,6 +288,25 @@ select {
 /* _________________________ */
 .numbered-title {
 	margin-bottom: 3rem;
+}
+
+.numbered-title {
+	margin-top: clamp(1.5rem, 8.33vw, 6.25rem);
+	margin-bottom: clamp(32px, 7.81vw, 97px);
+	text-align: center;
+}
+
+@media (min-width: 600px) {
+	.numbered-title {
+		text-align: initial;
+		padding-left: 5vw;
+	}
+}
+@media (min-width: 900px) {
+	.numbered-title {
+		text-align: initial;
+		padding-left: max(45px, 11.53vw);
+	}
 }
 
 .numbered-title span {
@@ -474,7 +504,7 @@ select {
 	border-bottom: 3px solid hsl(var(--clr-white));
 }
 
-.dot {
+.dots > * {
 	cursor: pointer;
 	background-color: hsl(var(--clr-white), 0.17);
 	aspect-ratio: 1;
@@ -482,11 +512,11 @@ select {
 	border-radius: 50%;
 }
 
-.dot:hover {
+.dots > *:hover {
 	background-color: hsl(var(--clr-white), 0.5);
 }
 
-.dot[aria-selected='true'] {
+.dots > *[aria-selected='true'] {
 	background-color: hsl(var(--clr-white));
 }
 
@@ -525,9 +555,6 @@ select {
 /* homepage */
 .home {
 	background-image: url('./assets/home/background-home-mobile.jpg');
-	background-size: cover;
-	background-position: center center;
-	background-repeat: no-repeat;
 }
 
 @media (min-width: 600px) {
@@ -577,9 +604,6 @@ select {
 /* destination */
 .destination {
 	background-image: url('./assets/destination/background-destination-mobile.jpg');
-	background-size: cover;
-	background-position: center center;
-	background-repeat: no-repeat;
 }
 
 @media (min-width: 600px) {
@@ -594,25 +618,6 @@ select {
 	}
 }
 
-.destination .numbered-title {
-	margin-top: clamp(1.5rem, 8.33vw, 6.25rem);
-	margin-bottom: clamp(32px, 7.81vw, 97px);
-	text-align: center;
-}
-
-@media (min-width: 600px) {
-	.destination .numbered-title {
-		text-align: initial;
-		padding-left: 5vw;
-	}
-}
-@media (min-width: 900px) {
-	.destination .numbered-title {
-		text-align: initial;
-		padding-left: max(45px, 11.53vw);
-	}
-}
-
 .destination .main {
 	margin: initial;
 	--gap: 6.9vw;
@@ -623,7 +628,7 @@ select {
 	}
 }
 
-.destination .image {
+.image {
 	width: clamp(170px, 39vw, 445px);
 }
 
@@ -664,5 +669,88 @@ select {
 @media (min-width: 900px) {
 	.destination .sub-content {
 		justify-content: flex-start;
+	}
+}
+/* crew */
+.crew {
+	background-image: url('./assets/crew/background-crew-mobile.jpg');
+	background-color: #222;
+	background-blend-mode: multiply;
+}
+
+@media (min-width: 600px) {
+	.crew {
+		background-image: url('./assets/crew/background-crew-tablet.jpg');
+	}
+}
+
+@media (min-width: 900px) and (orientation: landscape) {
+	.crew {
+		background-image: url('./assets/crew/background-crew-desktop.jpg');
+	}
+}
+
+.crew .main {
+	--gap: max(32px, 5.21vw);
+	margin-top: initial;
+}
+
+.crew .dots {
+	--gap: clamp(16px, 2vw, 24px);
+}
+
+.crew .dots > * {
+	width: clamp(10px, 1vw, 15px);
+}
+
+.crew .image {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 60vw;
+}
+
+.crew .image::after {
+	content: '';
+	width: clamp(327px, 87.2vw, 450px);
+	height: 1px;
+	background-color: hsl(var(--clr-white), 0.2);
+	display: block;
+}
+
+@media (min-width: 600px) {
+	.crew .dots {
+		order: 1;
+	}
+
+	.crew .image {
+		order: 2;
+	}
+
+	.crew .image::after {
+		display: none;
+	}
+}
+
+@media (min-width: 900px) and (orientation: landscape) {
+	.crew .main {
+		flex-direction: column;
+		padding-left: max(45px, 11.53vw);
+	}
+	.crew .image {
+		position: absolute;
+		right: max(45px, 4vw);
+		bottom: 0;
+		width: 40vw;
+	}
+	.crew .main-content {
+		align-self: flex-start;
+		width: initial;
+	}
+	.crew .main-content p {
+		max-width: 450px;
+	}
+	.crew .dots {
+		align-self: flex-start;
 	}
 }
