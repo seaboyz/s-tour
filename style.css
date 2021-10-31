@@ -9,7 +9,7 @@
 
 	/* font sizes */
 	--fs-900: clamp(5rem, 20vw, 9.375rem);
-	--fs-800: 6.25rem;
+	--fs-800: clamp(3.5rem, 10.42vw, 6.25rem);
 	--fs-700: 3.5rem;
 	--fs-600: clamp(1.25rem, 4.17vw, 2rem);
 	--fs-500: clamp(1rem, 2.6vw, 1.75rem);
@@ -79,32 +79,25 @@ a {
 }
 
 /* set up the body */
+
+html {
+	overflow: auto;
+}
+
+body {
+	overflow: hidden;
+}
+
 body {
 	font-family: var(--ff-sans-normal);
 	font-size: var(--fs-400);
 	line-height: 1.5;
 	min-height: 100vh;
-	overflow: hidden;
 	background-color: hsl(var(--clr-dark));
 	color: hsl(var(--clr-white));
 	min-width: 375px;
-}
 
-@media (orientation: lanscape) {
-	body {
-		overflow: hidden;
-	}
-}
-
-@media (min-width: 600px) {
-	body {
-		overflow: initial;
-	}
-}
-@media (min-width: 900px) {
-	body {
-		overflow: hidden;
-	}
+	position: relative;
 }
 
 /* make images easier to work with */
@@ -283,17 +276,12 @@ select {
 /* Custom properties         */
 /* _________________________ */
 .numbered-title {
-	font-family: var(--ff-sans-cond);
-	font-size: var(--fs-500);
-	text-transform: uppercase;
 	margin-bottom: 3rem;
-	letter-spacing: 4.75px;
 }
 
 .numbered-title span {
-	margin-right: 1.75rem;
-	font-weight: var(--fw-700);
 	color: hsl(var(--clr-white), 0.25);
+	margin-right: clamp(18px, 2.47vw, 28px);
 }
 
 /* explore button */
@@ -351,6 +339,7 @@ select {
 }
 
 /* navigation */
+
 .primary-navigation {
 	gap: var(--gap, 2rem);
 	background-color: hsl(var(--clr-white), 0.04);
@@ -469,19 +458,18 @@ select {
 	}
 }
 
-.tab {
+.tabs > * {
 	background-color: unset;
 	border: none;
 	cursor: pointer;
 	color: hsl(var(--clr-light));
 	font-family: var(--ff-sans-cond);
 	letter-spacing: 2.7px;
-	text-transform: uppercase;
 	font-size: var(--fs-300);
 	padding: 0.75rem 0;
 }
 
-.tab[aria-selected='true'] {
+.tabs > *[aria-selected='true'] {
 	color: hsl(var(--clr-white));
 	border-bottom: 3px solid hsl(var(--clr-white));
 }
@@ -529,6 +517,11 @@ select {
 /* page specific             */
 /* _________________________ */
 
+/* design */
+.design {
+	overflow: scroll;
+}
+
 /* homepage */
 .home {
 	background-image: url('./assets/home/background-home-mobile.jpg');
@@ -561,7 +554,7 @@ select {
 	width: clamp(327px, 87.2vw, 450px);
 }
 
-.main-content span {
+.main-content h1 span {
 	margin-block: max(1rem, 0.16em);
 }
 
@@ -581,12 +574,95 @@ select {
 	}
 }
 
-/* must be at the end for css source order reason */
-.hidden {
-	display: none;
+/* destination */
+.destination {
+	background-image: url('./assets/destination/background-destination-mobile.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
 }
+
 @media (min-width: 600px) {
-	.hidden {
-		display: inherit;
+	.destination {
+		background-image: url('./assets/destination/background-destination-tablet.jpg');
+	}
+}
+
+@media (min-width: 900px) and (orientation: landscape) {
+	.destination {
+		background-image: url('./assets/destination/background-destination-desktop.jpg');
+	}
+}
+
+.destination .numbered-title {
+	margin-top: clamp(1.5rem, 8.33vw, 6.25rem);
+	margin-bottom: clamp(32px, 7.81vw, 97px);
+	text-align: center;
+}
+
+@media (min-width: 600px) {
+	.destination .numbered-title {
+		text-align: initial;
+		padding-left: 5vw;
+	}
+}
+@media (min-width: 900px) {
+	.destination .numbered-title {
+		text-align: initial;
+		padding-left: max(45px, 11.53vw);
+	}
+}
+
+.destination .main {
+	margin: initial;
+	--gap: 6.9vw;
+}
+@media (min-width: 900px) {
+	.destination .main {
+		--gap: min(10.9vw, 157px);
+	}
+}
+
+.destination .image {
+	width: clamp(170px, 39vw, 445px);
+}
+
+.destination .tabs {
+	justify-content: center;
+}
+
+@media (min-width: 900px) {
+	.destination .tabs {
+		justify-content: flex-start;
+	}
+}
+
+.destination .main-content {
+	width: min(74.61vw, 100%);
+}
+
+@media (min-width: 900px) {
+	.destination .main-content {
+		width: 455px;
+	}
+}
+
+.destination .sub-content {
+	margin-top: clamp(32px, 6.38vw, 54px);
+	padding-top: 32px;
+	flex-direction: column;
+	border-top: 1px solid #383b4b;
+}
+
+@media (min-width: 600px) {
+	.destination .sub-content {
+		flex-direction: initial;
+		justify-content: center;
+	}
+}
+
+@media (min-width: 900px) {
+	.destination .sub-content {
+		justify-content: flex-start;
 	}
 }
