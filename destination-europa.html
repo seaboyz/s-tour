@@ -1,38 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Space tourism website</title>
-</head>
-<body>
+		<title>Space Tour</title>
+		<!-- Google fonts -->
 
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&amp;family=Bellefair&amp;family=Barlow:wght@400;700&amp;display=swap"
+			rel="stylesheet"
+		/>
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="style.css" />
+		<script src="script.js" defer></script>
+	</head>
+	<body class="destination">
+		<header class="primary-header flex" style="justify-content: space-between">
+			<div class="logo">
+				<a href="index.html">
+					<img src="./assets/shared/logo.svg" alt="space tour logo" />
+				</a>
+			</div>
+			<button
+				class="mobile-nav-toggle"
+				aria-controls="primary-navigation"
+				aria-expanded="false"
+			>
+				<span class="sr-only">Menu</span>
+			</button>
+			<nav>
+				<ul
+					id="primary-navigation"
+					data-visible="false"
+					class="primary-navigation flex"
+				>
+					<li>
+						<a class="underline" href="index.html" aria-selected="false"
+							><span aria-hidden="true">00</span>home</a
+						>
+					</li>
+					<li>
+						<a
+							class="underline"
+							href="destination-moon.html"
+							aria-selected="true"
+							><span aria-hidden="true">01</span>destination</a
+						>
+					</li>
+					<li>
+						<a class="underline" href="#" aria-selected="false"
+							><span aria-hidden="true">02</span>crew</a
+						>
+					</li>
+					<li>
+						<a class="underline" href="#" aria-selected="false"
+							><span aria-hidden="true">03</span>technology</a
+						>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<h2 class="numbered-title ff-sans-cond fs-500 letter-spacing-2 uppercase">
+			<span class="ff-sans-cond fs-500 letter-spacing-2 uppercase">01</span>pick
+			your destination
+		</h2>
 
-  01 Pick your destination
+		<main class="main flex">
+			<div class="image" style="align-self: center">
+				<img src="./assets/destination/image-moon.png" alt="" />
+			</div>
 
-  Moon
-  Mars
-  Europa
-  Titan
+			<div class="main-content">
+				<div class="tabs flex" style="gap: 2rem; margin-bottom: 1.5rem">
+					<a
+						href="destination-moon.html"
+						aria-selected="false"
+						class="underline uppercase"
+						>Moon</a
+					>
+					<a
+						href="destination-mars.html"
+						aria-selected="false"
+						class="underline uppercase"
+						>Mars</a
+					>
+					<a
+						href="destination-europa.html"
+						aria-selected="true"
+						class="underline uppercase"
+						>Europa</a
+					>
+					<a
+						href="destination-titan.html"
+						aria-selected="false"
+						class="underline uppercase"
+						>TITAN</a
+					>
+				</div>
+				<h1
+					class="ff-sans-cond uppercase text-accent letter-spacing-2 fs-500"
+					style="font-weight: var(--fw-400)"
+				>
+					<span class="ff-serif uppercase text-white block fs-800">EUROPA</span>
+				</h1>
+				<p class="text-accent">
+					The smallest of the four Galilean moons orbiting Jupiter, Europa is a
+					winter lover’s dream. With an icy surface, it’s perfect for a bit of
+					ice skating, curling, hockey, or simple relaxation in your snug
+					wintery cabin.
+				</p>
 
-  Europa
-
-  The smallest of the four Galilean moons orbiting Jupiter, Europa is a 
-  winter lover’s dream. With an icy surface, it’s perfect for a bit of 
-  ice skating, curling, hockey, or simple relaxation in your snug 
-  wintery cabin.
-
-  Avg. distance
-  628 mil. km
-
-  Est. travel time
-  3 years
-</body>
+				<div class="sub-content flex">
+					<h3
+						class="ff-sans-cond fs-200 uppercase letter-spacing-3 text-accent"
+					>
+						Avg. Distance<span
+							class="text-white ff-serif uppercase"
+							style="
+								font-size: 1.75rem;
+								display: block;
+								letter-spacing: initial;
+								margin-top: 12px;
+							"
+							>628 MIL. km</span
+						>
+					</h3>
+					<h3
+						class="ff-sans-cond fs-200 uppercase letter-spacing-3 text-accent"
+					>
+						Est. travel time<span
+							class="text-white ff-serif uppercase"
+							style="
+								font-size: 1.75rem;
+								display: block;
+								letter-spacing: initial;
+								margin-top: 12px;
+							"
+							>3 years</span
+						>
+					</h3>
+				</div>
+			</div>
+		</main>
+	</body>
 </html>
