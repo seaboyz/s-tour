@@ -816,3 +816,23 @@ select {
 		width: 35%;
 	}
 }
+
+.spaceport .image {
+	background-image: url('./assets/technology/image-spaceport-landscape.jpg');
+}
+
+@media (min-width: 900px) and (orientation: landscape) {
+	.spaceport .image {
+		background-image: url('./assets/technology/image-spaceport-portrait.jpg');
+	}
+}
+
+.capsule .image {
+	background-image: url('./assets/technology/image-space-capsule-landscape.jpg');
+}
+
+@media (min-width: 900px) and (orientation: landscape) {
+	.capsule .image {
+		background-image: url('./assets/technology/image-space-capsule-portrait.jpg');
+	}
+}
