@@ -18,22 +18,28 @@
 			class="primary-navigation flex"
 		>
 			<li>
-				<a class="underline" href="/" aria-selected="true"
-					><span aria-hidden="true">00</span>home</a
-				>
+				<a class="underline" href="/" aria-selected="<%= url==='/' %>"
+					><span aria-hidden="true">00</span>home
+				</a>
 			</li>
 			<li>
-				<a class="underline" href="/destination" aria-selected="false"
+				<a
+					class="underline"
+					href="/destination"
+					aria-selected="<%= url==='/destination' %>"
 					><span aria-hidden="true">01</span>destination</a
 				>
 			</li>
 			<li>
-				<a class="underline" href="/crew" aria-selected="false"
+				<a class="underline" href="/crew" aria-selected="<%= url==='/crew' %>"
 					><span aria-hidden="true">02</span>crew</a
 				>
 			</li>
 			<li>
-				<a class="underline" href="/technology" aria-selected="false"
+				<a
+					class="underline"
+					href="/technology"
+					aria-selected="<%= url==='/technology' %>"
 					><span aria-hidden="true">03</span>technology</a
 				>
 			</li>

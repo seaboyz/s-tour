@@ -4,7 +4,8 @@ const router = express.Router()
 
 router.get('/', (req, res) =>
 {
-  res.render('destination')
+  const url = req.baseUrl
+  res.render('destination', { url })
 })
 
 module.exports = router

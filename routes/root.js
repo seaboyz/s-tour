@@ -8,8 +8,8 @@ const rootDir = require('../util/path')
 
 router.get('/', (req, res) =>
 {
-  // res.sendFile(path.join(rootDir, 'views', 'index.html'))
-  res.render('index')
+  const url = req.url
+  res.render('index', { url })
 })
 
 module.exports = router
