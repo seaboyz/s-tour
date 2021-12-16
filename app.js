@@ -1,10 +1,11 @@
 const express = require('express')
 
+const rootRoute = require('./routes/root')
+
 const app = express()
 
-app.get('/', (req, res) =>
-{
-  res.send('<h1>Hello from the server</h1>')
-})
+// root route
+app.use('/', rootRoute)
+
 
 app.listen(3000)
