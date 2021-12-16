@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>Space Tour</title>
+		<!-- Google fonts -->
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&amp;family=Bellefair&amp;family=Barlow:wght@400;700&amp;display=swap"
+			rel="stylesheet"
+		/>
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="style.css" />
+		<script src="script.js" defer></script>
+	</head>
+	<body class="home">
+		<header class="primary-header flex" style="justify-content: space-between">
+			<div class="logo">
+				<a href="index.html">
+					<img src="./assets/shared/logo.svg" alt="space tour logo" />
+				</a>
+			</div>
+			<button
+				class="mobile-nav-toggle"
+				aria-controls="primary-navigation"
+				aria-expanded="false"
+			>
+				<span class="sr-only">Menu</span>
+			</button>
+			<nav>
+				<ul
+					id="primary-navigation"
+					data-visible="false"
+					class="primary-navigation flex"
+				>
+					<li>
+						<a class="underline" href="index.html" aria-selected="true"
+							><span aria-hidden="true">00</span>home</a
+						>
+					</li>
+					<li>
+						<a
+							class="underline"
+							href="destination-moon.html"
+							aria-selected="false"
+							><span aria-hidden="true">01</span>destination</a
+						>
+					</li>
+					<li>
+						<a
+							class="underline"
+							href="crew-commander.html"
+							aria-selected="false"
+							><span aria-hidden="true">02</span>crew</a
+						>
+					</li>
+					<li>
+						<a
+							class="underline"
+							href="technology-vehicle.html"
+							aria-selected="false"
+							><span aria-hidden="true">03</span>technology</a
+						>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<main class="main flex">
+			<div class="main-content">
+				<h1
+					class="ff-sans-cond uppercase text-accent letter-spacing-2 fs-500"
+					style="font-weight: var(--fw-400)"
+				>
+					So, you want to travel to
+					<span class="ff-serif uppercase text-white block fs-900">space</span>
+				</h1>
+				<p class="text-accent">
+					Let’s face it; if you want to go to space, you might as well genuinely
+					go to outer space and not hover kind of on the edge of it. Well sit
+					back, and relax because we’ll give you a truly out of this world
+					experience!
+				</p>
+			</div>
+			<div>
+				<a
+					href="destination-moon.html"
+					class="
+						large-button
+						ff-serif
+						text-dark
+						bg-white
+						fs-600
+						uppercase
+						letter-spacing-3
+					"
+				>
+					<span></span>
+					Explore
+				</a>
+			</div>
+		</main>
+	</body>
+</html>
