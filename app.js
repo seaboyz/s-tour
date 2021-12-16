@@ -5,6 +5,9 @@ const destinationRoute = require('./routes/destination')
 
 const app = express()
 
+// view engine
+app.set('view engine', 'ejs')
+
 // middleware
 app.use(express.static('public'))
 
