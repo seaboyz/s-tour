@@ -1,7 +1,7 @@
 <header class="primary-header flex" style="justify-content: space-between">
 	<div class="logo">
 		<a href="/">
-			<img src="./assets/shared/logo.svg" alt="space tour logo" />
+			<img src="/assets/shared/logo.svg" alt="space tour logo" />
 		</a>
 	</div>
 	<button
@@ -18,7 +18,7 @@
 			class="primary-navigation flex"
 		>
 			<li>
-				<a class="underline" href="/" aria-selected="<%= url==='/' %>"
+				<a class="underline" href="/" aria-selected="<%= path==='/' %>"
 					><span aria-hidden="true">00</span>home
 				</a>
 			</li>
@@ -26,12 +26,12 @@
 				<a
 					class="underline"
 					href="/destination"
-					aria-selected="<%= url==='/destination' %>"
+					aria-selected="<%= path==='/destination' %>"
 					><span aria-hidden="true">01</span>destination</a
 				>
 			</li>
 			<li>
-				<a class="underline" href="/crew" aria-selected="<%= url==='/crew' %>"
+				<a class="underline" href="/crew" aria-selected="<%= path==='/crew' %>"
 					><span aria-hidden="true">02</span>crew</a
 				>
 			</li>
@@ -39,7 +39,7 @@
 				<a
 					class="underline"
 					href="/technology"
-					aria-selected="<%= url==='/technology' %>"
+					aria-selected="<%= path==='/technology' %>"
 					><span aria-hidden="true">03</span>technology</a
 				>
 			</li>

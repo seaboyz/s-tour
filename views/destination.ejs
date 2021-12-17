@@ -1,7 +1,7 @@
 <%- include('includes/head') %>
 
 <body class="destination">
-	<%- include('includes/header.ejs',{url}) %>
+	<%- include('includes/header.ejs',{path}) %>
 
 	<h2 class="numbered-title ff-sans-cond fs-500 letter-spacing-2 uppercase">
 		<span class="ff-sans-cond fs-500 letter-spacing-2 uppercase">01</span>pick
@@ -10,27 +10,33 @@
 
 	<main class="main flex">
 		<div class="image" style="align-self: center">
-			<img src="./assets/destination/image-moon.png" alt="" />
+			<img src="<%= data.images.png %> " alt="" />
 		</div>
 
 		<div class="main-content">
 			<div class="tabs flex" style="gap: 2rem; margin-bottom: 1.5rem">
-				<a href="/" aria-selected="true" class="underline uppercase">Moon</a>
 				<a
-					href="destination-mars.html"
-					aria-selected="false"
+					href="/destination/moon"
+					aria-selected="<%= data.name.toLowerCase() === 'moon' %>"
+					class="underline uppercase"
+					>Moon</a
+				>
+
+				<a
+					href="/destination/mars"
+					aria-selected="<%= data.name.toLowerCase() === 'mars' %>"
 					class="underline uppercase"
 					>Mars</a
 				>
 				<a
-					href="destination-europa.html"
-					aria-selected="false"
+					href="/destination/europa"
+					aria-selected="<%= data.name.toLowerCase() === 'europa' %>"
 					class="underline uppercase"
 					>Europa</a
 				>
 				<a
-					href="destination-titan.html"
-					aria-selected="false"
+					href="/destination/titan"
+					aria-selected="<%= data.name.toLowerCase() === 'titan' %>"
 					class="underline uppercase"
 					>TITAN</a
 				>
@@ -39,14 +45,11 @@
 				class="ff-sans-cond uppercase text-accent letter-spacing-2 fs-500"
 				style="font-weight: var(--fw-400)"
 			>
-				<span class="ff-serif uppercase text-white block fs-800">moon</span>
+				<span class="ff-serif uppercase text-white block fs-800"
+					><%= data.name %>
+				</span>
 			</h1>
-			<p class="text-accent">
-				See our planet as you’ve never seen it before. A perfect relaxing trip
-				away to help regain perspective and come back refreshed. While you’re
-				there, take in some history by visiting the Luna 2 and Apollo 11 landing
-				sites.
-			</p>
+			<p class="text-accent"><%= data.description %></p>
 
 			<div class="sub-content flex">
 				<h3 class="ff-sans-cond fs-200 uppercase letter-spacing-3 text-accent">
@@ -58,8 +61,8 @@
 							letter-spacing: initial;
 							margin-top: 12px;
 						"
-						>384,400 km</span
-					>
+						><%= data.distance %>
+					</span>
 				</h3>
 				<h3 class="ff-sans-cond fs-200 uppercase letter-spacing-3 text-accent">
 					Est. travel time<span
@@ -70,8 +73,8 @@
 							letter-spacing: initial;
 							margin-top: 12px;
 						"
-						>3 days</span
-					>
+						><%= data.travel %>
+					</span>
 				</h3>
 			</div>
 		</div>
