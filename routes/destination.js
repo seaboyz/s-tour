@@ -10,6 +10,11 @@ const log = require('../util/log')
 const capitalize = require('../util/capitalize')
 const { find } = require('ramda')
 
+router.get('/', (req, res) =>
+{
+  res.redirect('/destination/moon')
+})
+
 router.all('*', (req, res) =>
 {
   const destination = compose(

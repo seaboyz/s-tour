@@ -8,8 +8,8 @@ const rootDir = require('../util/path')
 
 router.get('/', (req, res) =>
 {
-  const url = req.url
-  res.render('index', { url })
+  const path = req.url
+  res.render('index', { path })
 })
 
 module.exports = router

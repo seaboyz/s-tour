@@ -1,6 +1,6 @@
 const express = require('express')
 
-const rootRoute = require('./routes/root')
+const rootRoute = require('./routes/index')
 const destinationRoute = require('./routes/destination')
 
 const app = express()
