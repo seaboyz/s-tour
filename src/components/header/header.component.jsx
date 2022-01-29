@@ -4,7 +4,7 @@ import NavBar from '../navbar/navbar.component';
 
 const Header = () => (
 	<div className='header'>
-		<Logo className='logo' />
+		<Logo />
 		<NavBar />
 	</div>
 );
