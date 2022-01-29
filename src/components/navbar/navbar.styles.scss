@@ -71,27 +71,3 @@
 		display: initial;
 	}
 }
-
-.mobile-nav-toggle {
-	display: block;
-	position: absolute;
-	z-index: 2;
-	top: 33px;
-	right: 1.5rem;
-	background: transparent;
-	background-repeat: no-repeat;
-	border: none;
-	background-image: url('../../assets/shared/icon-hamburger.svg');
-	width: 24px;
-	height: 21px;
-}
-
-.mobile-nav-toggle[aria-expanded='true'] {
-	background-image: url('../../assets/shared/icon-close.svg');
-}
-
-@media (min-width: 600px) {
-	.mobile-nav-toggle {
-		display: none;
-	}
-}
