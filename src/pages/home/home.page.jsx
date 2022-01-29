@@ -1,9 +1,8 @@
 import './home.styles.scss';
-import Header from '../../components/header/header.component';
 
 const HomePage = () => (
 	<div className='home'>
-		<Header />
+		<h1>Home Page</h1>
 	</div>
 );
 

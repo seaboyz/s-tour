@@ -1,6 +1,6 @@
 import './logo.styles.scss';
 import logo from '../../assets/shared/logo.svg';
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 
 const Logo = () => (
 	<div className='logo'>

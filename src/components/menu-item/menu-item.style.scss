@@ -1,0 +1,23 @@
+.menu-item {
+	color: hsl(var(--clr-white));
+	font-family: var(--ff-sans-cond);
+	letter-spacing: 2.7px;
+	text-transform: uppercase;
+	font-size: var(--fs-300);
+	display: block;
+
+	@media (min-width: 600px) {
+		padding-block: 39px;
+	}
+
+	span {
+		font-weight: var(--fw-700);
+		margin-right: 0.75rem;
+		@media (min-width: 600px) {
+			display: none;
+		}
+		@media (min-width: 1200px) {
+			display: initial;
+		}
+	}
+}
