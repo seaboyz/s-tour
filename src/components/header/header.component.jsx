@@ -1,10 +1,10 @@
 import './header.styles.scss';
-import { ReactComponent as Logo } from '../../assets/shared/logo.svg';
+import Logo from '../logo/logo.conponent';
 import NavBar from '../navbar/navbar.component';
 
 const Header = () => (
-	<div>
-		<Logo />
+	<div className='header'>
+		<Logo className='logo' />
 		<NavBar />
 	</div>
 );

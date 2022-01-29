@@ -1,0 +1,32 @@
+/* header */
+.header {
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+	padding-top: 1.5rem;
+	position: relative;
+	padding-inline: clamp(24px, 5vw, 50px);
+}
+@media (min-width: 1200px) {
+	.header {
+		margin-top: min(calc(100vw - 1200px), 64px);
+		align-items: center;
+	}
+	.header::before {
+		content: '';
+		width: calc(100vw - 58vw - 108px);
+		height: 1px;
+		background-color: hsl(var(--clr-white), 0.25);
+		display: block;
+		position: relative;
+		right: 52vw;
+		z-index: 2;
+		order: 1;
+		justify-content: flex-end;
+	}
+}
+
+.logo {
+	width: clamp(40px, 10vw, 48px);
+	cursor: pointer;
+}

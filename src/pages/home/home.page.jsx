@@ -1,7 +1,10 @@
 import './home.styles.scss';
+import Header from '../../components/header/header.component';
 
-const HomePage = () => {
-	return <h1>Home Page</h1>;
-};
+const HomePage = () => (
+	<div className='home'>
+		<Header />
+	</div>
+);
 
 export default HomePage;
